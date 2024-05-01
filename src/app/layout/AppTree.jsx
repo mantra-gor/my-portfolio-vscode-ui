@@ -6,7 +6,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useTheme } from "@mui/material/styles";
 import { VscMarkdown } from "react-icons/vsc";
-import { ListItemIcon, ListItemText } from "@mui/material";
 
 export default function AppTree({
   pages,
