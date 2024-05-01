@@ -1,32 +1,40 @@
 # 💻 Skills
 
 ## General Tech Stacks
-- Architecture Design
-- Desktop App Development
+
 - Web Development (Frontend & Backend)
+- MERN Stack
 
 ## Programming languages
-- C# .NET
-- Python
-- JavaScript/TypeScript
-  - React.js
-- T-SQL
-- Go
-- C++
+
+- C
 - Java
-- VB.NET/VBA
+- JavaScript
+  - React.js
+- Python
+
+## Frontend Tools
+
+- Redux
+- Tailwind CSS
+- Material-UI
+- Bootstrap
+
+## Backend Tools
+
+- Node.js
+- Express.js
 
 ## Databases
-- MSSQL
-- PostgreSQL
+
 - MySQL
-- SQLite
+- MongoDB & Aggregation Pipeline
 
-## Cloud
-- Azure
-- GCP
-- Heroku
-- Render
+## Other Skills
 
-## Vcs
-- Git
+- Data Structures And Algorithms
+- Object-Oriented Programming (OOP)
+
+## VCS
+
+- Git and GitHub

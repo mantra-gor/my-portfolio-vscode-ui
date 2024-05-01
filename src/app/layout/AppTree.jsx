@@ -1,12 +1,12 @@
 import * as React from "react";
-import TreeView from "@mui/lab/TreeView";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import TreeItem from "@mui/lab/TreeItem";
+import { TreeView, TreeItem } from "@mui/x-tree-view";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useTheme } from "@mui/material/styles";
 import { VscMarkdown } from "react-icons/vsc";
+import { ListItemIcon, ListItemText } from "@mui/material";
 
 export default function AppTree({
   pages,
@@ -68,9 +68,22 @@ export default function AppTree({
       >
         {pages.map(({ index, name, route }) => (
           <TreeItem
-            key={index}
-            nodeId={index.toString()}
-            label={name}
+            key={index} // Use a unique key for each TreeItem
+            nodeId={`node-${index}`} // Use a unique nodeId for each TreeItem
+            itemId={index}
+            // label={<VscMarkdown style={{ color: "#6997d5" }} />}
+            label={
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                }}
+              >
+                <VscMarkdown color="#6997d5" size={18} />
+                <div>{name}</div>
+              </div>
+            }
             sx={{
               color: renderTreeItemColor(index),
               backgroundColor: renderTreeItemBgColor(index),
@@ -78,7 +91,7 @@ export default function AppTree({
                 backgroundColor: renderTreeItemBgColor(index),
               },
             }}
-            icon={<VscMarkdown color="#6997d5" />}
+            // icon={<VscMarkdown color="#6997d5" />}
             onClick={() => {
               if (!visiblePageIndexs.includes(index)) {
                 const newIndexs = [...visiblePageIndexs, index];

@@ -2,87 +2,60 @@
 
 ## Summary
 
-Senior Software Developer specializing in web application development. Experienced with all stages of the development cycle for dynamic web projects. Well-versed in numerous programming languages including C# .NET, Python and JavaScript/TypeScript. Strong background in both accounting/auditing and software development. Mitigated the gap between end users and developers, co-designed and built scalable solutions.
-
+Meet a final year CSE student, blending passion and expertise as a code enthusiast, software engineering and MERN Stack developer, crafting digital experiences that captivate and innovate.
 
 ## Experience
 
-**Software Developer** @ [Ernst & Young](https://www.ey.com/) _(Nov 2018 - Nov 2021)_
+**Web Developer Intern** @ [AeonX Digital Solution](https://www.aeonx.digital/) _(Jan 2024 - Present)_
+AeonX Digital is a niche Business Consulting company working into SAP Application Management Services, Sales and AWS Cloud Solutions .
 
-Completed full lifecycle application development to enterprise business applications including requirement analysis, system design, development, unit testing, implementation, testing support, performance tuning, maintenance, and post-production support.
+- Tasks/Responsibilities:
+  - Contributed to the development of SupplierX, a supply chain management app. Assisted in designing and implementing features like supplier onboarding, document management, and transaction processing. Participated in integrating JWT for secure access and implementing dynamic routing based on JWT verification. Collaborated with teams, conducted code reviews, and ensured app stability.
+
 - Detailed achievements:
-  - Collaborated with colleagues from worldwide to implement the Disaster Recovery Project. Completed ahead of the original schedule and saved budget up to 30%.
-  - Optimized deployment process and reduced manual work to accelerate product deployment by over 70%.
-  - Delivered virtual and live classroom training for employees(the cumulative number of trainees exceeded 500).
-- _**Technologies used:**_ C#, MSSQL, Python, React.js
-
-&nbsp;
-
-**Staff Auditor** @ [Deloitte & Touche](https://www2.deloitte.com/global/en.html) _(July 2017 - Nov 2018)_
-
-Planned and conducted operational and ﬁnancial audits to conﬁrm ﬁnancial statements are fairly presented in alignment with IFRS.
-- Detailed achievements:
-  - Delivered internal audit projects for major clients in the manufacturing industry with a focus on gap assessments/reviews of business processes and internal control.
-  - Supervised assigned auditing staffs to evaluate performance and maintain standards.
-
-&nbsp;
-
-**Audit Intern** @ [KPMG](https://home.kpmg/) _(July 2015 - July 2015)_
-
-Performed analytical procedures and analyses to detect unusual ﬁnancial relationships.
+  - Spearheaded the development of the SupplierX project, a complex supply chain management application, from conception to deployment.
+  - Designed and developed dynamic routing based on JWT verification, enabling role-based access control and seamless navigation for users.
+  - Collaborated with cross-functional teams to gather requirements, design solutions, and deliver high-quality code that met client expectations.
+  - Successfully managed the onboarding process of new suppliers, implementing features for document verification and approval workflows.
+  - Contributed to the continuous improvement of the application by identifying areas for optimization and implementing solutions to enhance efficiency and usability.
+- _**Technologies used:**_ React.js, Next.js, MaterialUI, Redux
 
 ## Education
 
-`2021-2022` [National Taipei University of Technology](https://www-en.ntut.edu.tw/)
-- **Extension program** in Computer Science, Electrical Engineering, and Electronic Engineering
-- Courses: Computer Organization, Discrete Mathematics, Computer Program-
-ming(I), Object-Oriented Programming, Probability, Digital Logic Design
-- GPA: 4.0/4.0
+`2020-2024` [GTU (Gujarat Technological University)](https://gtu.ac.in/)
 
-`2021-2022` [National Taiwan Normal University](https://en.ntnu.edu.tw/)
-- **Extension program** in Electrical Engineering
-- Courses: Operating Systems
-- GPA: 4.3/4.3
+- **B.Tech** in Computer Science & Engineering
+- CGPA: 7.59/10.0
 
-`2020–2022` [Fu Jen Catholic University](https://www.fju.edu.tw/indexEN.jsp)
-- **Extension program** in Software Engineering and Digital Innovation Applications, and Information Management 
-- Courses: Algorithms, Linear Algebra, Database Administration
-- GPA: 4.0/4.0
+`2019-2020` [M.B. Patel School Kadi Campus (Sector-23, Gandhinagar)](https://mbpsh.svkm.org.in/)
 
-`2020-2021` [National Taipei University of Business](https://www.ntub.edu.tw/index.php?Lang=en)
-- **Extension program** in Information Management 
-- Courses: Data Structures
-- GPA: 4.0/4.0
-
-`2012-2016` [National Cheng Kung University](https://www.ncku.edu.tw/index.php?Lang=en)
-- **B.B.A** in Accountancy
-- GPA: 3.88/4.0
+- **Higher Secondary Education** 12th Science (PCM)
 
 ## Skills
 
-### General Tech Stacks
-- Architecture Design
-- Desktop App Development
+## General Tech Stacks
+
 - Web Development (Frontend & Backend)
+- MERN Stack
 
-### Programming languages
-- C# .NET
-- Python
-- JavaScript/TypeScript
-  - React.js
-- T-SQL
-- Go
-- C++
+## Programming languages
+
+- C
 - Java
-- VB.NET/VBA
+- JavaScript
+  - React.js
+- Python
 
-## Certificates
-- Certified Public Accountant (Taiwan)
+## Other Skills
 
-## Accomplishments
-**Won First Place** @ [EY Innovation Campaign](https://www.ey.com/) _(May 2021)_
-Built Trial Balance System, a system that streamlines data transmission across users, providing consistent, reliable financial reports to them. 
+- Data Structures And Algorithms
+- Object-Oriented Programming (OOP)
+
+## 🥇 Certificates
+
+- [Responsive Web Design (freeCodeCamp)](https://freecodecamp.org/certification/mantra-gor/responsive-web-design)
 
 ## Languages
-**English**: C1
-**Chinese**: Native
+**English**: Professional Working Proficiency
+**Hindi**: Professional Working Proficiency
+**Gujarati**: Native or Bilingual Proficiency
