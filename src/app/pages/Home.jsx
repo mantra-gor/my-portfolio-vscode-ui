@@ -34,7 +34,7 @@ export default function Home({ setSelectedIndex }) {
       <Grid item xs={3}>
         <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
           <Box display="flex" sx={{ justifyContent: "center" }}>
-            <img src={logo} width="120px" height="120px" alt="mg-avatar" />
+            <img src={logo} width="120px" height="120px" alt="Mantra Gor" />
           </Box>
           <Box>
             <Grid
