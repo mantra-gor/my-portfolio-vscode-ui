@@ -57,14 +57,17 @@ export default function Home({ setSelectedIndex }) {
             >
               <Typography className="title" variant="subtitle1" gutterBottom>
                 ReactJS Developer{" "}
-                <Link
-                  sx={{
+                <a
+                  href="https://www.aeonx.digital/"
+                  rel="noreferrer"
+                  target="_blank"
+                  style={{
                     fontStyle: "italic",
                     cursor: "pointer",
                   }}
                 >
                   @AeonX Digital Solutions
-                </Link>{" "}
+                </a>{" "}
                 | MERN Stack Developer | Java Enthusiast |
                 <Typography>Crafting Tomorrow's Digital Solutions</Typography>
               </Typography>
