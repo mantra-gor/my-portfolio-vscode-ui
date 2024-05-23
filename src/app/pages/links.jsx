@@ -29,13 +29,13 @@ export const links = [
   // {
   //   index: 3,
   //   title: "Find me on Medium",
-  //   href: "https://medium.com/@noworneverev",
+  //   href: "",
   //   icon: <FaMedium />,
   // },
   // {
   //   index: 4,
   //   title: "Find me on Blog",
-  //   href: "https://noworneverev.github.io/blog/",
+  //   href: "",
   //   icon: <FaBlog />,
   // },
 ];

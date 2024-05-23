@@ -6,8 +6,27 @@
   <link rel="icon" href="%PUBLIC_URL%/avatar.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Mantra Gor's portfolio showcasing skills and projects in React and VSCode." />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <meta name="description"
+    content="Mantra Gor's portfolio showcasing skills, projects in React, VSCode, and more. Discover the work and experience of a dedicated web developer." />
+  <meta name="keywords" content="Mantra Gor, portfolio, web developer, React, VSCode, projects" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Mantra Gor | Portfolio" />
+  <meta property="og:description"
+    content="Mantra Gor's portfolio showcasing skills, projects in React, VSCode, and more. Discover the work and experience of a dedicated web developer." />
+  <meta property="og:image" content="%PUBLIC_URL%/avatar.png" />
+  <meta property="og:url" content="https://www.mantragor.tech" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mantra Gor | Portfolio" />
+  <meta name="twitter:description"
+    content="Mantra Gor's portfolio showcasing skills, projects in React, VSCode, and more. Discover the work and experience of a dedicated web developer." />
+  <meta name="twitter:image" content="%PUBLIC_URL%/avatar.png" />
+  <meta name="twitter:url" content="https://www.mantragor.tech" />
+
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/avatar.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
@@ -19,6 +38,24 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mantra Gor",
+      "url": "https://www.mantragor.tech",
+      "sameAs": [
+        "https://www.linkedin.com/in/mantra-gor",
+        "https://github.com/mantra-gor"
+      ],
+      "jobTitle": "Web Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "AeonX Digital Solution"
+      }
+    }
+  </script>
+  <script src="%PUBLIC_URL%/main.js"></script>
 </body>
 
 </html>
