@@ -23,7 +23,7 @@ export const links = [
   {
     index: 3,
     title: "Get my resume",
-    href: "https://drive.google.com/file/d/1xYd_UK696ppD0XUCDHLQQa_K4hw6amvZ/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1UiaCdb8c32-wmRQDvOpy3BkeYWTcfA_N/view?usp=sharing",
     icon: <GrDocumentUser />,
   },
   // {
