@@ -1,6 +1,6 @@
 # 👨‍💻 Experience
 
-**Web Developer Intern** @ [AeonX Digital Solution](https://www.aeonx.digital/) _(Jan 2024 - Present)_
+**Web Developer Intern** @ [AeonX Digital Solution](https://www.aeonx.digital/) _(Jan 2024 - Dec 2024)_
 AeonX Digital is a niche Business Consulting company working into SAP Application Management Services, Sales and AWS Cloud Solutions .
 
 - Tasks/Responsibilities: 
