@@ -8,10 +8,9 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useEffect } from "react";
-import mantra_gor from "../../static/avatar.png";
+import mantra_gor from "../assets/avatar.png";
 import { useLocation } from "react-router-dom";
 import { links } from "./links";
-import "../styles/style.css";
 
 export default function Home({ setSelectedIndex }) {
   const { pathname } = useLocation();

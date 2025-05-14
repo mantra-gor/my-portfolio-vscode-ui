@@ -15,7 +15,7 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { useLocation } from "react-router-dom";
 import rehypeRaw from "rehype-raw";
@@ -200,7 +200,10 @@ function MarkdownImage(props) {
 
 function MarkdownParagraph(props) {
   const keyToCheck = "$$typeof";
-  const exists = props.children.some((obj) => obj.hasOwnProperty(keyToCheck));
+  const childrenArray = React.Children.toArray(props.children);
+  const exists = childrenArray.some((obj) =>
+    Object.prototype.hasOwnProperty.call(obj, keyToCheck)
+  );
 
   const isWarning =
     typeof props.children[0] === "string" &&
@@ -250,10 +253,12 @@ export default function MDContainer({ path }) {
       .then((text) => setContent(text));
   }, [path]);
 
+  const REACT_APP_NAME = import.meta.env.VITE_PROD_APP_NAME;
+
   useEffect(() => {
     let title = pathname.substring(1, pathname.length);
     title = title[0].toUpperCase() + title.substring(1);
-    document.title = `${process.env.REACT_APP_NAME} | ${title}`;
+    document.title = `${REACT_APP_NAME} | ${title}`;
   }, [pathname]);
 
   return (

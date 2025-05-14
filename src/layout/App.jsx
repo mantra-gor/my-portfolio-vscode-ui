@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import AppTree from "./AppTree";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
-import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
+import { Routes, Route, useNavigate, Navigate } from "react-dom";
 import AppButtons from "./AppButtons";
 import MDContainer from "../components/MDContainer";
 import Home from "../pages/Home";
@@ -112,6 +112,7 @@ export default function App() {
       );
       if (page) navigate(page.route);
     } else {
+      console.log(""); // need to remove
     }
   }, [visiblePageIndexs, navigate, deletedIndex, selectedIndex]);
 

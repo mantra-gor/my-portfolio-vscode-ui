@@ -5,13 +5,10 @@ import ReactGA from "react-ga4";
 const usePageTracking = () => {
   const location = useLocation();
   const [initialized, setInitialized] = useState(false);
-
+  const MEASUREMENT_ID = import.meta.env.VITE_PROD_MEASUREMENT_ID;
   useEffect(() => {
-    if (
-      !window.location.href.includes("localhost") &&
-      process.env.REACT_APP_MEASUREMENT_ID
-    ) {
-      ReactGA.initialize(process.env.REACT_APP_MEASUREMENT_ID);
+    if (!window.location.href.includes("localhost") && MEASUREMENT_ID) {
+      ReactGA.initialize(MEASUREMENT_ID);
       setInitialized(true);
     }
   }, []);
