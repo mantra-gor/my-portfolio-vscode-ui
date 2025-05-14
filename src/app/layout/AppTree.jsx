@@ -52,13 +52,17 @@ export default function AppTree({
       aria-label="file system navigator"
       defaultCollapseIcon={<ExpandMoreIcon />}
       defaultExpandIcon={<ChevronRightIcon />}
-      sx={{ minWidth: 220 }}
-      // sx={{ height: 240, flexGrow: 1, maxWidth: 400, overflowY: 'auto' }}
+      sx={{ minWidth: 220, flexGrow: 1, overflowY: "auto", maxWidth: 400 }}
+      // sx={{ height: 240, flexGrow: 1, maxWidth: 400, overflowY: "auto" }}
       defaultExpanded={["-1"]}
     >
       <TreeItem
         nodeId="-1"
-        label="Home"
+        label={
+          <span style={{ fontSize: "14px", fontWeight: 600 }}>
+            OPEN EDITORS
+          </span>
+        }
         color="#bdc3cf"
         onClick={() => {
           navigate("/");
@@ -70,7 +74,6 @@ export default function AppTree({
             key={index} // Use a unique key for each TreeItem
             nodeId={`node-${index}`} // Use a unique nodeId for each TreeItem
             itemId={index}
-            // label={<VscMarkdown style={{ color: "#6997d5" }} />}
             label={
               <div
                 style={{
@@ -80,7 +83,9 @@ export default function AppTree({
                 }}
               >
                 <VscMarkdown color="#6997d5" size={18} />
-                <div>{name}</div>
+                <div>
+                  {name.length > 15 ? name.substring(0, 14) + "..." : name}
+                </div>
               </div>
             }
             sx={{
@@ -90,7 +95,7 @@ export default function AppTree({
                 backgroundColor: renderTreeItemBgColor(index),
               },
             }}
-            // icon={<VscMarkdown color="#6997d5" />}
+            icon={<VscMarkdown color="#6997d5" />}
             onClick={() => {
               if (!visiblePageIndexs.includes(index)) {
                 const newIndexs = [...visiblePageIndexs, index];

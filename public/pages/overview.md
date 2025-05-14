@@ -2,7 +2,7 @@
 
 ## Summary
 
-Meet a final year CSE student, blending passion and expertise as a code enthusiast, software engineering and MERN Stack developer, crafting digital experiences that captivate and innovate.
+Meet a Computer Science Engineering graduate, combining a passion for coding with expertise in software engineering and MERN Stack development, crafting innovative digital experiences that inspire and engage.
 
 ## Experience
 
@@ -56,6 +56,7 @@ AeonX Digital is a niche Business Consulting company working into SAP Applicatio
 - [Responsive Web Design (freeCodeCamp)](https://freecodecamp.org/certification/mantra-gor/responsive-web-design)
 
 ## Languages
-**English**: Professional Working Proficiency
+**English**: Professional Working Proficiency (C1 – Advanced)
 **Hindi**: Professional Working Proficiency
 **Gujarati**: Native or Bilingual Proficiency
+**German**: Elementary Proficiency (A1 – Beginner)

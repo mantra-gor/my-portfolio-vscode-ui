@@ -17,170 +17,177 @@ export default function Footer() {
       square
       elevation={0}
       // sx={{ height: '3vh' }}
-      sx={{ height: "20px", color: "white" }}
+      sx={{ height: "20px", color: "white", width: "100vw" }}
       display="flex"
     >
       <Grid container>
+        {/* Remote Icon Panel */}
         <Grid
           item
           sx={{
-            width: "35px",
+            width: 35,
             backgroundColor: "#2E8461",
+            display: "flex",
             justifyContent: "center",
             alignItems: "center",
             cursor: "pointer",
             "&:hover": {
-              background: "#329171",
+              backgroundColor: "#329171",
             },
           }}
-          display="flex"
         >
           <VscRemote fontSize="0.9rem" />
         </Grid>
+
+        {/* Git Branch + Error/Warning Panel */}
         <Grid
           item
-          sx={{ backgroundColor: "#3279CB", width: "200px" }}
-          display="flex"
+          sx={{
+            backgroundColor: "#3279CB",
+            display: "flex",
+            flexGrow: 1,
+          }}
         >
-          <Stack direction="row" spacing={0.5} sx={{ pl: 1 }}>
+          <Stack
+            direction="row"
+            spacing={0.5}
+            sx={{ pl: 1, alignItems: "center" }}
+          >
+            {/* Git Branch Link */}
             <Box
               component={Link}
               href="https://github.com/mantra-gor/my-vscode-portfolio"
+              target="_blank"
               underline="none"
               color="white"
-              target="_blank"
-              display="flex"
               sx={{
                 px: 0.5,
-                justifyContent: "center",
+                display: "flex",
                 alignItems: "center",
+                cursor: "pointer",
                 "&:hover": {
-                  background: "#1f8ad2",
+                  backgroundColor: "#1f8ad2",
                 },
               }}
             >
               <IoIosGitBranch fontSize="0.9rem" />
-              <Typography sx={{ ml: 0.5, mt: 0.1, fontSize: "0.6rem" }}>
-                main
-              </Typography>
+              <Typography sx={{ ml: 0.5, fontSize: "0.6rem" }}>main</Typography>
             </Box>
-            <Stack direction="row" spacing={0.5}>
+
+            {/* Error & Warning Section */}
+            <Stack direction="row" spacing={0.5} alignItems="center">
+              {/* Errors */}
               <Box
-                display="flex"
                 sx={{
-                  justifyContent: "center",
+                  display: "flex",
                   alignItems: "center",
-                  py: 0.3,
                   cursor: "pointer",
+                  px: 0.5,
+                  py: 0.3,
                   "&:hover": {
-                    background: "#1f8ad2",
+                    backgroundColor: "#1f8ad2",
                   },
                 }}
               >
                 <VscError fontSize="0.9rem" />
               </Box>
-              <Box
-                display="flex"
-                sx={{
-                  justifyContent: "center",
-                  alignItems: "center",
-                  pt: 0.3,
-                }}
-              >
-                <Typography sx={{ fontSize: "0.6rem" }}>0</Typography>
-              </Box>
+              <Typography sx={{ fontSize: "0.6rem" }}>0</Typography>
 
+              {/* Warnings */}
               <Box
-                display="flex"
                 sx={{
-                  justifyContent: "center",
+                  display: "flex",
                   alignItems: "center",
-                  py: 0.3,
                   cursor: "pointer",
+                  px: 0.5,
+                  py: 0.3,
                   "&:hover": {
-                    background: "#1f8ad2",
+                    backgroundColor: "#1f8ad2",
                   },
                 }}
               >
                 <VscWarning fontSize="0.9rem" />
               </Box>
-              <Box
-                display="flex"
-                sx={{
-                  justifyContent: "center",
-                  alignItems: "center",
-                  pt: 0.3,
-                }}
-              >
-                <Typography sx={{ fontSize: "0.6rem" }}>0</Typography>
-              </Box>
+              <Typography sx={{ fontSize: "0.6rem" }}>0</Typography>
             </Stack>
           </Stack>
         </Grid>
+
+        {/* Right Panel - DE | Prettier | Feedback | Bell */}
         <Grid
           item
-          sx={{ backgroundColor: "#3279CB", minWidth: `calc(100% - 235px)` }}
-          display="flex"
-          justifyContent="flex-end"
+          sx={{
+            backgroundColor: "#3279CB",
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "center",
+            px: 2,
+          }}
         >
-          <Box display="flex" justifyContent="flex-end">
-            <Stack
-              justifyContent="end"
-              direction="row"
-              spacing={0.8}
-              sx={{ pr: 1.5 }}
+          <Stack direction="row" spacing={0.8}>
+            {/* DE */}
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                px: 0.5,
+                cursor: "pointer",
+                "&:hover": {
+                  backgroundColor: "#1f8ad2",
+                },
+              }}
             >
-              <Box
-                display="flex"
-                sx={{
-                  px: 0.5,
-                  justifyContent: "center",
-                  alignItems: "center",
-                  cursor: "pointer",
-                  "&:hover": {
-                    background: "#1f8ad2",
-                  },
-                }}
-              >
-                <VscCheck fontSize="0.9rem" />
-                <Typography sx={{ ml: 0.5, mt: 0.1, fontSize: "0.6rem" }}>
-                  Prettier
-                </Typography>
-              </Box>
+              <Typography sx={{ fontSize: "0.6rem" }}>DE</Typography>
+            </Box>
 
-              <Box
-                display="flex"
-                sx={{
-                  justifyContent: "center",
-                  alignItems: "center",
-                  py: 0.3,
-                  px: 0.5,
-                  cursor: "pointer",
-                  "&:hover": {
-                    background: "#1f8ad2",
-                  },
-                }}
-              >
-                <VscFeedback fontSize="0.9rem" />
-              </Box>
-              <Box
-                display="flex"
-                sx={{
-                  width: "50%",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  py: 0.3,
-                  px: 0.5,
-                  cursor: "pointer",
-                  "&:hover": {
-                    background: "#1f8ad2",
-                  },
-                }}
-              >
-                <VscBell fontSize="0.9rem" />
-              </Box>
-            </Stack>
-          </Box>
+            {/* Prettier */}
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                px: 0.5,
+                cursor: "pointer",
+                "&:hover": {
+                  backgroundColor: "#1f8ad2",
+                },
+              }}
+            >
+              <VscCheck fontSize="0.9rem" />
+              <Typography sx={{ ml: 0.5, fontSize: "0.6rem" }}>
+                Prettier
+              </Typography>
+            </Box>
+
+            {/* Feedback */}
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                px: 0.5,
+                cursor: "pointer",
+                "&:hover": {
+                  backgroundColor: "#1f8ad2",
+                },
+              }}
+            >
+              <VscFeedback fontSize="0.9rem" />
+            </Box>
+
+            {/* Notifications */}
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                px: 0.5,
+                cursor: "pointer",
+                "&:hover": {
+                  backgroundColor: "#1f8ad2",
+                },
+              }}
+            >
+              <VscBell fontSize="0.9rem" />
+            </Box>
+          </Stack>
         </Grid>
       </Grid>
     </Box>

@@ -194,9 +194,9 @@ function MarkdownBlockquote(props) {
 //   }
 // }
 
-// function MarkdownImage(props: any) {
-//   return <img src={props.src} alt={props.alt} />;
-// }
+function MarkdownImage(props) {
+  return <img src={props.src} alt={props.alt} />;
+}
 
 function MarkdownParagraph(props) {
   const keyToCheck = "$$typeof";
@@ -276,7 +276,7 @@ export default function MDContainer({ path }) {
           hr: MarkdownDivider,
           // br: MarkdownBr,
           // input: MarkdownCheckbox,
-          // img: MarkdownImage,
+          img: MarkdownImage,
           blockquote: MarkdownBlockquote,
         }}
         remarkPlugins={[remarkGfm, remarkBreaks]}

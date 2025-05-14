@@ -145,8 +145,8 @@ export default function AppButtons({
         whiteSpace: "nowrap",
         backgroundColor: theme.palette.mode === "dark" ? "#252527" : "#f3f3f3",
         "&::-webkit-scrollbar": {
-          height: "3px",
-          // backgroundColor: 'red',
+          height: "1px",
+          backgroundColor: "red",
         },
         "&::-webkit-scrollbar-thumb": {
           backgroundColor:
@@ -156,14 +156,14 @@ export default function AppButtons({
           backgroundColor:
             theme.palette.mode === "dark" ? "#ffffff" : "#8c8c8c",
         },
-        // '&::-webkit-scrollbar:hover, & *::-webkit-scrollbar:hover': {
-        //   backgroundColor: '#ffffff',
-        // },
-        // '&::-webkit-scrollbar-thumb:hover, & *::-webkit-scrollbar-thumb:hover':
-        //   {
-        //     backgroundColor:
-        //       theme.palette.mode === 'dark' ? '#ffffff' : '#8c8c8c',
-        //   },
+        "&::-webkit-scrollbar:hover, & *::-webkit-scrollbar:hover": {
+          backgroundColor: "#ffffff",
+        },
+        "&::-webkit-scrollbar-thumb:hover, & *::-webkit-scrollbar-thumb:hover":
+          {
+            backgroundColor:
+              theme.palette.mode === "dark" ? "#ffffff" : "#8c8c8c",
+          },
       }}
     >
       {pages.map(({ index, name, route }) =>

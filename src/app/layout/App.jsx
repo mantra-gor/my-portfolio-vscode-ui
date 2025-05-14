@@ -184,7 +184,7 @@ export default function App() {
               <Grid
                 sx={{
                   scrollBehavior: "smooth",
-                  // overflow: 'scroll',
+                  overflow: "scroll",
                   overflowY: "auto",
                   height: `calc(100vh - 20px - 33px)`,
                 }}
@@ -215,7 +215,6 @@ export default function App() {
           </Grid>
         </Grid>
       </Container>
-      {/* </Router> */}
     </ThemeProvider>
   );
 }

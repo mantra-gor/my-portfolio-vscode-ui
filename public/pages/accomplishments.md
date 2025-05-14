@@ -1,3 +1,5 @@
 # 🏆 Accomplishments
-**Won First Place** @ [EY Innovation Campaign](https://www.ey.com/) _(May 2021)_
-Built Trial Balance System, a system that streamlines data transmission across users, providing consistent, reliable financial reports to them. 
+
+**Winner** @ [AeonX Code Clash Hackathon 2024](https://www.aeonx.digital/) _(Aug 2024)_
+
+Developed an innovative solution during the hackathon, tackling a complex problem by building an efficient and scalable system. The project showcased my skills in software development, problem-solving, and quick adaptation to challenges in a competitive environment.
