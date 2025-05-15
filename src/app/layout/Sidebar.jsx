@@ -161,6 +161,30 @@ export default function Sidebar({
             )}
           </Box>
         </Tooltip>
+        <Tooltip
+          title={darkMode ? "Translate to German" : "Translate to English"}
+          placement="right"
+          arrow
+        >
+          <Box
+            sx={{
+              flexGrow: 0,
+              fontSize: 18,
+              padding: 1,
+              color: "#858585",
+              cursor: "pointer",
+              "&:hover": {
+                color: "white",
+              },
+              WebkitTapHighlightColor: "rgba(0,0,0,0)",
+            }}
+            display="flex"
+            justifyContent="center"
+            onClick={handleThemeChange}
+          >
+            {!darkMode ? <Box>EN</Box> : <Box>DE</Box>}
+          </Box>
+        </Tooltip>
         <Tooltip title="Markdown syntax" arrow placement="right">
           <Link
             onClick={() => {

@@ -9,12 +9,16 @@
 
 - C
 - Java
-- JavaScript
-  - React.js
+- JavaScript/TypeScript
+  - ReactJs
+  - NextJs
+  - Node.js
+  - Express.js
 - Python
 
 ## Frontend Tools
 
+- Next JS
 - Redux
 - Tailwind CSS
 - Material-UI
@@ -34,6 +38,11 @@
 
 - Data Structures And Algorithms
 - Object-Oriented Programming (OOP)
+
+## DevOps
+
+- AWS Services
+  - Like: S3, EC2, Cloudfront, Lambda, SNS
 
 ## VCS
 

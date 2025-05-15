@@ -12,12 +12,19 @@ import { useEffect, useState } from "react";
 import AppTree from "./AppTree";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
-import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  useNavigate,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 import AppButtons from "./AppButtons";
 import MDContainer from "../components/MDContainer";
-import Home from "../pages/Home";
+import Terminal from "../pages/Terminal";
 import pages from "../pages/pages";
 import usePageTracking from "../hooks/usePageTracking";
+import "../styles/style.css";
 import { isBrowser } from "react-device-detect";
 
 function initVisiblePageIndexs(pages) {
@@ -31,7 +38,9 @@ function initVisiblePageIndexs(pages) {
 
 export default function App() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [expanded, setExpanded] = useState(isBrowser);
+  const [isTerminalClosed, setIsTerminalClosed] = useState(true);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [currentComponent, setCurrentComponent] = useState("");
   const [visiblePageIndexs, setVisiblePageIndexs] = useState(
@@ -75,11 +84,31 @@ export default function App() {
     const currentTheme = localStorage.getItem("theme");
     if (!currentTheme) setDarkMode(true);
     else setDarkMode(currentTheme === "dark");
+
+    // addEventListener for terminal shortcut
+    const handleKeyDown = (e) => {
+      if (e.ctrlKey && e.key === "`") {
+        setIsTerminalClosed((prev) => !prev);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+
+    // ✅ Clean up the event listener
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
   const deletedIndex = visiblePages.find(
     (x) => !visiblePageIndexs.includes(x.index)
   )?.index;
+
+  const closeTerminal = () => {
+    setIsTerminalClosed(true);
+    if (location.pathname === "/") {
+      navigate("/overview");
+    }
+  };
 
   useEffect(() => {
     const newPages = [];
@@ -184,15 +213,39 @@ export default function App() {
               <Grid
                 sx={{
                   scrollBehavior: "smooth",
-                  overflow: "scroll",
-                  overflowY: "auto",
+                  overflow: isTerminalClosed ? "scroll" : "hidden",
+                  // overflowY: "auto",
                   height: `calc(100vh - 20px - 33px)`,
+                  position: "relative",
                 }}
               >
+                {!isTerminalClosed && (
+                  <div
+                    style={{
+                      position: "absolute",
+                      right: 0,
+                      bottom: 0,
+                      left: 0,
+                      top: 0,
+                    }}
+                  >
+                    <Terminal
+                      darkMode={darkMode}
+                      setSelectedIndex={setSelectedIndex}
+                      closeTerminal={closeTerminal}
+                    />
+                  </div>
+                )}
                 <Routes>
                   <Route
                     path="/"
-                    element={<Home setSelectedIndex={setSelectedIndex} />}
+                    element={
+                      <Terminal
+                        darkMode={darkMode}
+                        setSelectedIndex={setSelectedIndex}
+                        closeTerminal={closeTerminal}
+                      />
+                    }
                   />
                   {pages.map(({ index, name, route }) => (
                     <Route
