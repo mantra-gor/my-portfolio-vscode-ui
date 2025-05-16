@@ -36,12 +36,6 @@
     "eject": "react-scripts eject",
     "generate-sitemap": "node generate-sitemap.mjs"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
