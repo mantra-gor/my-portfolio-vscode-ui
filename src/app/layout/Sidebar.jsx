@@ -7,7 +7,7 @@ import { BiGitBranch } from "react-icons/bi";
 import Divider from "@mui/material/Divider";
 import { links } from "../pages/links";
 import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 export default function Sidebar({
   expanded,
@@ -17,11 +17,11 @@ export default function Sidebar({
   setSelectedIndex,
 }) {
   const navigate = useNavigate();
-  const { i18n } = useTranslation();
+  // const { i18n } = useTranslation();
 
   const toggleLanguage = () => {
-    const newLang = i18n.language === "en" ? "de" : "en";
-    i18n.changeLanguage(newLang);
+    // const newLang = i18n.language === "en" ? "de" : "en";
+    // i18n.changeLanguage(newLang);
   };
 
   return (
@@ -190,7 +190,10 @@ export default function Sidebar({
             justifyContent="center"
             onClick={toggleLanguage}
           >
-            {i18n.language === "de" ? <Box>EN</Box> : <Box>DE</Box>}
+            {/* //! demo */}
+            <Box>DE</Box>
+
+            {/* {i18n.language === "de" ? <Box>EN</Box> : <Box>DE</Box>} */}
           </Box>
         </Tooltip>
         <Tooltip title="Markdown syntax" arrow placement="right">

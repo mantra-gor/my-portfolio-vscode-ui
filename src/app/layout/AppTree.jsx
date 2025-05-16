@@ -6,7 +6,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useTheme } from "@mui/material/styles";
 import { VscMarkdown } from "react-icons/vsc";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 export default function AppTree({
   pages,
@@ -21,7 +21,7 @@ export default function AppTree({
   const theme = useTheme();
   // const [selectedIndex, setSelectedIndex] = useState(-1);
   let { pathname } = useLocation();
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   const page = pages.find((x) => x.route === pathname);
 
@@ -62,7 +62,8 @@ export default function AppTree({
         nodeId="-1"
         label={
           <span style={{ fontSize: "14px", fontWeight: 600 }}>
-            {t("OPEN EDITORS")}
+            {/* {t("OPEN EDITORS")} */}
+            OPEN EDITORS
           </span>
         }
         color="#bdc3cf"
