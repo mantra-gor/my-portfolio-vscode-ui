@@ -15,3 +15,11 @@ root.render(
   </React.StrictMode>
 );
 // });
+
+// package.json code for eslint
+//  "eslintConfig": {
+//     "extends": [
+//       "react-app",
+//       "react-app/jest"
+//     ]
+//   },
