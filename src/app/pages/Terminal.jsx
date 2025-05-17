@@ -28,7 +28,11 @@ const terminalFontStyle = {
   fontFamily: "Roboto Mono, monospace",
 };
 
-export default function Terminal({ darkMode, closeTerminal }) {
+export default function Terminal({
+  darkMode,
+  closeTerminal,
+  terminalContinued,
+}) {
   const { t } = useTranslation();
   const [text, setText] = useState("");
   const [history, setHistory] = useState([]);
@@ -383,7 +387,7 @@ export default function Terminal({ darkMode, closeTerminal }) {
 
   // Initial terminal sequence
   useEffect(() => {
-    if (commandIndex >= commandSequence.length) {
+    if (commandIndex >= commandSequence.length || terminalContinued) {
       setTerminalReady(true);
       return;
     }

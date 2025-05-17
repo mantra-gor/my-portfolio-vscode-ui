@@ -97,7 +97,7 @@ export default function App() {
 
     // addEventListener for terminal shortcut
     const handleKeyDown = (e) => {
-      if (e.ctrlKey && e.key === "`") {
+      if (e.ctrlKey && e.key === "`" && window.location.pathname !== "/") {
         setIsTerminalClosed((prev) => !prev);
       }
     };
@@ -218,6 +218,7 @@ export default function App() {
                   setVisiblePageIndexs={setVisiblePageIndexs}
                 />
               </Grid>
+              {console.log(window.location.pathname)}
 
               <Grid
                 sx={{
@@ -242,6 +243,7 @@ export default function App() {
                       darkMode={darkMode}
                       setSelectedIndex={setSelectedIndex}
                       closeTerminal={closeTerminal}
+                      terminalContinued={true}
                     />
                   </div>
                 )}
