@@ -21,7 +21,7 @@ export default function AppTree({
   const theme = useTheme();
   // const [selectedIndex, setSelectedIndex] = useState(-1);
   let { pathname } = useLocation();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const page = pages.find((x) => x.route === pathname);
 
@@ -56,23 +56,22 @@ export default function AppTree({
       defaultExpandIcon={<ChevronRightIcon />}
       sx={{ minWidth: 220, flexGrow: 1, overflowY: "auto", maxWidth: 400 }}
       // sx={{ height: 240, flexGrow: 1, maxWidth: 400, overflowY: "auto" }}
-      defaultExpanded={["-1"]}
+      defaultExpanded={["node-1n"]}
     >
       <TreeItem
-        nodeId="-1"
+        nodeId="node-1n"
         label={
           <span style={{ fontSize: "14px", fontWeight: 600 }}>
             {t("OPEN EDITORS")}
-            {/* OPEN EDITORS */}
           </span>
         }
         color="#bdc3cf"
         onClick={() => {
-          navigate("/");
+          // navigate("/");
           setSelectedIndex(-1);
         }}
       >
-        {pages.map(({ index, name, route }) => (
+        {pages.map(({ index, nameEN, nameDE, route }) => (
           <TreeItem
             key={index} // Use a unique key for each TreeItem
             nodeId={`node-${index}`} // Use a unique nodeId for each TreeItem
@@ -87,7 +86,13 @@ export default function AppTree({
               >
                 <VscMarkdown color="#6997d5" size={18} />
                 <div>
-                  {name.length > 15 ? name.substring(0, 14) + "..." : name}
+                  {i18n.language === "en"
+                    ? nameEN.length > 15
+                      ? nameEN.substring(0, 14) + "..."
+                      : nameEN
+                    : nameDE.length > 15
+                    ? nameDE.substring(0, 14) + "..."
+                    : nameDE}
                 </div>
               </div>
             }

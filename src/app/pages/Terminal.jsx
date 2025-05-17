@@ -22,12 +22,14 @@ import {
   IconButton,
 } from "@mui/material";
 import personalData from "../data/personalData.json";
+import { useTranslation } from "react-i18next";
 
 const terminalFontStyle = {
   fontFamily: "Roboto Mono, monospace",
 };
 
 export default function Terminal({ darkMode, closeTerminal }) {
+  const { t } = useTranslation();
   const [text, setText] = useState("");
   const [history, setHistory] = useState([]);
   const [cursorVisible, setCursorVisible] = useState(true);
@@ -43,8 +45,8 @@ export default function Terminal({ darkMode, closeTerminal }) {
 
   // Portfolio data
   const fullName = "Mantra Gor";
-  const title = "Software Developer | React • Node.js • MongoDB";
-  const welcomeText = "Welcome to my portfolio";
+  const title = t("title");
+  const welcomeText = t("welcomeText");
 
   const commandSequence = [
     { text: "sudo ./initialize_portfolio.sh", delay: 80, pause: 700 },
@@ -55,7 +57,7 @@ export default function Terminal({ darkMode, closeTerminal }) {
     },
     { text: `Initializing virtual environment...`, delay: 40, pause: 600 },
     { text: `Establishing secure connection...`, delay: 40, pause: 500 },
-    { text: `Successfully loaded portfolio v2.5.1`, delay: 40, pause: 400 },
+    { text: `Successfully loaded portfolio v2.5.4`, delay: 40, pause: 400 },
   ];
 
   const skills = [
@@ -72,13 +74,12 @@ export default function Terminal({ darkMode, closeTerminal }) {
     {
       name: "StudyNotion",
       tech: "React, Node.js, Express.js, MongoDB",
-      description: "A full-stack Ed Tech application with payment integration.",
+      description: t("project_1-description"),
     },
     {
       name: "BillSane",
       tech: "React, Electron JS",
-      description:
-        "An invoice management desktop application with business monitoring capabilities.",
+      description: t("project_2-description"),
     },
   ];
 
@@ -95,6 +96,7 @@ export default function Terminal({ darkMode, closeTerminal }) {
               ...terminalFontStyle,
             }}
           >
+            {/* {t("availabe-commands")} */}
             Available commands:
           </Typography>
           <Typography sx={{ ...terminalFontStyle, fontSize: "14px" }}>
@@ -266,7 +268,7 @@ export default function Terminal({ darkMode, closeTerminal }) {
     },
     contact: () => {
       return (
-        <Box sx={{ my: 2 }}>
+        <Box sx={{ my: 2, overflow: scroll }}>
           <Typography
             sx={{ color: darkMode ? "#FFFF00" : "#f5bd02", fontWeight: "bold" }}
           >
@@ -465,7 +467,6 @@ export default function Terminal({ darkMode, closeTerminal }) {
         width: "100%",
         display: "flex",
         flexDirection: "column",
-        // bgcolor: darkMode ? "#fff" : "#ffffff",
         bgcolor: "#1A1A1A",
         color: "#FFF",
       }}
@@ -500,7 +501,6 @@ export default function Terminal({ darkMode, closeTerminal }) {
             sx={{
               minHeight: "40px",
               fontSize: "0.8rem",
-              // color: activeTab === "output" ? "#fff" : "#aaa",
               color:
                 activeTab === "output"
                   ? darkMode
@@ -517,7 +517,6 @@ export default function Terminal({ darkMode, closeTerminal }) {
             sx={{
               minHeight: "40px",
               fontSize: "0.8rem",
-              // color: activeTab === "output" ? "#fff" : "#aaa",
               color:
                 activeTab === "output"
                   ? darkMode
@@ -527,7 +526,6 @@ export default function Terminal({ darkMode, closeTerminal }) {
             }}
           />{" "}
           <Tab
-            // icon={<AssignmentIcon sx={{ fontSize: 16, mr: 1 }} />}
             iconPosition="start"
             disabled
             label="DEBUG CONSOLE"
@@ -535,7 +533,6 @@ export default function Terminal({ darkMode, closeTerminal }) {
             sx={{
               minHeight: "40px",
               fontSize: "0.8rem",
-              // color: activeTab === "output" ? "#fff" : "#aaa",
               color:
                 activeTab === "output"
                   ? darkMode
@@ -561,7 +558,6 @@ export default function Terminal({ darkMode, closeTerminal }) {
             }}
           />
           <Tab
-            // icon={<TerminalIcon sx={{ fontSize: 16, mr: 1 }} />}
             iconPosition="start"
             label="TERMINAL"
             value="terminal"
@@ -600,9 +596,11 @@ export default function Terminal({ darkMode, closeTerminal }) {
 
       <Box
         sx={{
-          p: 2,
+          p: 0,
           flexGrow: 1,
           outline: "none",
+          overflow: "scroll",
+          scrollBehavior: "smooth",
           bgcolor: darkMode ? "#1A1A1A" : "#f7f7f7",
         }}
         onClick={() => inputRef.current?.focus()}
@@ -610,6 +608,7 @@ export default function Terminal({ darkMode, closeTerminal }) {
         <Box
           ref={terminalRef}
           sx={{
+            p: 2,
             height: "100%",
             overflow: "auto",
             "&::-webkit-scrollbar": {
@@ -706,7 +705,7 @@ export default function Terminal({ darkMode, closeTerminal }) {
                     ...terminalFontStyle,
                   }}
                 >
-                  Type{" "}
+                  {t("type")}{" "}
                   <Box
                     component="span"
                     sx={{
@@ -717,7 +716,7 @@ export default function Terminal({ darkMode, closeTerminal }) {
                   >
                     help
                   </Box>{" "}
-                  to see available commands
+                  {t("to see available commands")}
                 </Typography>
               </Box>
 

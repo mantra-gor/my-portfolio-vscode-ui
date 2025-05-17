@@ -9,8 +9,10 @@ import {
   VscCheck,
 } from "react-icons/vsc";
 import { IoIosGitBranch } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { i18n } = useTranslation();
   return (
     <Box
       component={Paper}
@@ -137,7 +139,11 @@ export default function Footer() {
                 },
               }}
             >
-              <Typography sx={{ fontSize: "0.6rem" }}>DE</Typography>
+              <Typography
+                sx={{ fontSize: "0.6rem", textTransform: "uppercase" }}
+              >
+                {i18n.language}
+              </Typography>
             </Box>
 
             {/* Prettier */}

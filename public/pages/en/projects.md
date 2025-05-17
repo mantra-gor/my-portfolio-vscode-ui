@@ -12,7 +12,7 @@
 
 - Integrated Razorpay for payment handling, ensuring a smooth checkout process for course purchases.
 
-- Utilized Cloudinary for cloud-based media management, enabling efficient storage and management of course content.
+- Utilized AWS S3 for cloud-based media storage, enabling efficient and scalable management of course content.
 
 - Implemented JWT for secure authentication and authorization, ensuring data privacy and security.
 

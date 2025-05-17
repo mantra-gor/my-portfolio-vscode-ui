@@ -1,5 +1,13 @@
 {
     "welcome": "Willkommen auf meiner Website!",
     "overview": "Übersicht",
-    "OPEN EDITORS": "GEÖFFNETE EDITOREN"
+    "OPEN EDITORS": "GEÖFFNETE EDITOREN",
+    "title": "Softwareentwickler | React • Node.js • MongoDB",
+    "welcomeText": "Entdecken Sie meine Arbeit in der Softwareentwicklung – von Frontend-Finesse bis zu Backend-Logik.",
+    "project_1-description": "Eine vollständige Ed-Tech-Anwendung mit Zahlungsintegration.",
+    "project_2-description": "Eine Desktop-Anwendung zur Rechnungsverwaltung mit Funktionen zur Unternehmensüberwachung.",
+    "availabe-commands": "Verfügbare Befehle:",
+    "about-cmd-desc": "Informationen über mich anzeigen",
+    "type": "Geben Sie",
+    "to see available commands": "ein, um die verfügbaren Befehle anzuzeigen"
 }

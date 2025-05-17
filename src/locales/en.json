@@ -1,5 +1,13 @@
 {
     "welcome": "Welcome to my website!",
     "overview": "overview",
-    "OPEN EDITORS": "OPEN EDITORS"
+    "OPEN EDITORS": "OPEN EDITORS",
+    "title": "Software Developer | React • Node.js • MongoDB",
+    "welcomeText": "Discover my work in software development, from frontend finesse to backend logic.",
+    "project_1-description": "A full-stack Ed Tech application with payment integration.",
+    "project_2-description": "An invoice management desktop application with business monitoring capabilities.",
+    "availabe-commands": "Available commands:",
+    "about-cmd-desc": "Display information about me",
+    "type": "Type",
+    "to see available commands": "to see available commands"
 }

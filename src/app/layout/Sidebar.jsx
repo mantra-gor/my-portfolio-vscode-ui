@@ -72,7 +72,15 @@ export default function Sidebar({
             <VscFiles />
           </Box>
         </Box>
-        <Tooltip title="Source of this project" arrow placement="right">
+        <Tooltip
+          title={
+            i18n.language === "de"
+              ? "Quelle für dieses Projekt"
+              : "Source of this project"
+          }
+          arrow
+          placement="right"
+        >
           <Link
             target="_blank"
             href={"https://github.com/mantra-gor/my-vscode-portfolio"}
@@ -103,7 +111,12 @@ export default function Sidebar({
         <Divider sx={{ m: 0.5 }} />
 
         {links.map((link) => (
-          <Tooltip title={link.title} arrow placement="right" key={link.index}>
+          <Tooltip
+            title={i18n.language === "de" ? link.titleDE : link.titleEN}
+            arrow
+            placement="right"
+            key={link.index}
+          >
             <Link
               target="_blank"
               href={link.href}
@@ -139,7 +152,15 @@ export default function Sidebar({
         flexDirection="column"
       >
         <Tooltip
-          title={darkMode ? "Turn on the light" : "Turn off the light"}
+          title={
+            i18n.language === "de"
+              ? darkMode
+                ? "Licht einschalten"
+                : "Licht ausschalten"
+              : darkMode
+              ? "Turn on the light"
+              : "Turn off the light"
+          }
           placement="right"
           arrow
         >
@@ -185,14 +206,12 @@ export default function Sidebar({
                 color: "white",
               },
               WebkitTapHighlightColor: "rgba(0,0,0,0)",
+              userSelect: "none",
             }}
             display="flex"
             justifyContent="center"
             onClick={toggleLanguage}
           >
-            {/* //! demo */}
-            {/* <Box>DE</Box> */}
-
             {i18n.language === "de" ? <Box>EN</Box> : <Box>DE</Box>}
           </Box>
         </Tooltip>

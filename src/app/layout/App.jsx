@@ -26,6 +26,8 @@ import pages from "../pages/pages";
 import usePageTracking from "../hooks/usePageTracking";
 import "../styles/style.css";
 import { isBrowser } from "react-device-detect";
+import { useTranslation } from "react-i18next";
+import isProdEnv from "../utils/environment";
 
 function initVisiblePageIndexs(pages) {
   const tabs = [];
@@ -39,6 +41,7 @@ function initVisiblePageIndexs(pages) {
 export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
+  const { i18n } = useTranslation();
   const [expanded, setExpanded] = useState(isBrowser);
   const [isTerminalClosed, setIsTerminalClosed] = useState(true);
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -84,6 +87,13 @@ export default function App() {
     const currentTheme = localStorage.getItem("theme");
     if (!currentTheme) setDarkMode(true);
     else setDarkMode(currentTheme === "dark");
+
+    // do not allow right click in prod
+    if (isProdEnv()) {
+      document.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+      });
+    }
 
     // addEventListener for terminal shortcut
     const handleKeyDown = (e) => {
@@ -199,7 +209,6 @@ export default function App() {
                 }}
               >
                 <AppButtons
-                  // pages={pages}
                   pages={visiblePages}
                   selectedIndex={selectedIndex}
                   setSelectedIndex={setSelectedIndex}
@@ -247,11 +256,15 @@ export default function App() {
                       />
                     }
                   />
-                  {pages.map(({ index, name, route }) => (
+                  {pages.map(({ index, nameEN, route }) => (
                     <Route
                       key={index}
                       path={route}
-                      element={<MDContainer path={`./pages/${name}`} />}
+                      element={
+                        <MDContainer
+                          path={`./pages/${i18n.language}/${nameEN}`}
+                        />
+                      }
                     />
                   ))}
                   <Route

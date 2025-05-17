@@ -4,6 +4,7 @@ import { VscMarkdown, VscChromeClose } from "react-icons/vsc";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
 import { Container } from "@mui/system";
+import { useTranslation } from "react-i18next";
 
 export default function AppButtons({
   pages,
@@ -16,7 +17,7 @@ export default function AppButtons({
 }) {
   const navigate = useNavigate();
   const theme = useTheme();
-
+  const { i18n } = useTranslation();
   function renderButtonBgColor(index) {
     if (theme.palette.mode === "dark") {
       return selectedIndex === index ? "#1e1e1e" : "#2d2d2d";
@@ -65,7 +66,7 @@ export default function AppButtons({
     }
   }
 
-  function renderPageButton(index, name, route) {
+  function renderPageButton(index, nameEN, nameDE, route) {
     return (
       <Box
         key={index}
@@ -103,7 +104,7 @@ export default function AppButtons({
           >
             <VscMarkdown />
           </Box>
-          {name}
+          {i18n.language === "en" ? nameEN : nameDE}
           <Box
             component={Paper}
             sx={{
@@ -166,8 +167,8 @@ export default function AppButtons({
           },
       }}
     >
-      {pages.map(({ index, name, route }) =>
-        renderPageButton(index, name, route)
+      {pages.map(({ index, nameEN, nameDE, route }) =>
+        renderPageButton(index, nameEN, nameDE, route)
       )}
     </Container>
   );
