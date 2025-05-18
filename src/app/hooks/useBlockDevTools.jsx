@@ -12,7 +12,6 @@ function useBlockDevTools() {
 
     const handleKeyDown = (e) => {
       const key = e.key.toLowerCase();
-
       const isBlockedShortcut =
         key === "f12" ||
         (e.ctrlKey && e.shiftKey && key === "i") ||

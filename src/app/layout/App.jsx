@@ -90,13 +90,6 @@ export default function App() {
     if (!currentTheme) setDarkMode(true);
     else setDarkMode(currentTheme === "dark");
 
-    // do not allow right click in prod
-    if (isProdEnv()) {
-      document.addEventListener("contextmenu", function (event) {
-        event.preventDefault();
-      });
-    }
-
     // addEventListener for terminal shortcut
     const handleKeyDown = (e) => {
       if (e.ctrlKey && e.key === "`" && window.location.pathname !== "/") {
