@@ -28,6 +28,7 @@ import "../styles/style.css";
 import { isBrowser } from "react-device-detect";
 import { useTranslation } from "react-i18next";
 import isProdEnv from "../utils/environment";
+import useBlockDevTools from "../hooks/useBlockDevTools";
 
 function initVisiblePageIndexs(pages) {
   const tabs = [];
@@ -41,6 +42,7 @@ function initVisiblePageIndexs(pages) {
 export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
+  const [devActivated, setDevActivated] = useBlockDevTools();
   const { i18n } = useTranslation();
   const [expanded, setExpanded] = useState(isBrowser);
   const [isTerminalClosed, setIsTerminalClosed] = useState(true);
@@ -218,8 +220,6 @@ export default function App() {
                   setVisiblePageIndexs={setVisiblePageIndexs}
                 />
               </Grid>
-              {console.log(window.location.pathname)}
-
               <Grid
                 sx={{
                   scrollBehavior: "smooth",
@@ -244,6 +244,7 @@ export default function App() {
                       setSelectedIndex={setSelectedIndex}
                       closeTerminal={closeTerminal}
                       terminalContinued={true}
+                      setDevActivated={setDevActivated}
                     />
                   </div>
                 )}
@@ -255,6 +256,7 @@ export default function App() {
                         darkMode={darkMode}
                         setSelectedIndex={setSelectedIndex}
                         closeTerminal={closeTerminal}
+                        setDevActivated={setDevActivated}
                       />
                     }
                   />

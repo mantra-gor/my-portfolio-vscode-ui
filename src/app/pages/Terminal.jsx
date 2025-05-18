@@ -32,6 +32,7 @@ export default function Terminal({
   darkMode,
   closeTerminal,
   terminalContinued,
+  setDevActivated,
 }) {
   const { t } = useTranslation();
   const [text, setText] = useState("");
@@ -89,6 +90,26 @@ export default function Terminal({
 
   // Available commands
   const commands = {
+    "mg run dev mode": () => {
+      setDevActivated(true);
+      return (
+        <Box sx={{ mt: 2, color: "#dc2f02" }}>
+          <Typography sx={{ fontWeight: "bold" }}>
+            Dev Mode Activated Successfully!
+          </Typography>
+        </Box>
+      );
+    },
+    "mg stop dev mode": () => {
+      setDevActivated(false);
+      return (
+        <Box sx={{ mt: 2, color: "#0C910C" }}>
+          <Typography sx={{ fontWeight: "bold" }}>
+            Dev Mode Deactivated Successfully!
+          </Typography>
+        </Box>
+      );
+    },
     help: () => {
       return (
         <Box sx={{ mt: 2, color: "#0C910C" }}>
